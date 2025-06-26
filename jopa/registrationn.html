@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация | MajorMatch</title>
+  <link rel="stylesheet" href="CSSS/loloo.css">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="registration">
+
+    <div class="signup">
+      <form>
+        <label for="chk" aria-hidden="true">Зарегистрироваться</label>
+        <input type="text" name="txt" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Почта" required>
+        <input type="number" name="broj" placeholder="Номер телефона" required>
+        <input type="password" name="pswd" placeholder="Пароль" required>
+        <button type="submit">Sign up</button>
+      </form>
+    </div>
+
+    <div class="login">
+      <form>
+        <label for="chk" aria-hidden="true">Авторизоваться</label>
+        <input type="email" name="email" placeholder="Почта" required>
+        <input type="password" name="pswd" placeholder="Пароль" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // При отправке формы регистрации — переходим на testt.html
+    document.querySelector(".signup form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      window.location.href = "testt.html";
+    });
+
+    // При отправке формы входа — тоже переход на testt.html
+    document.querySelector(".login form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      window.location.href = "testt.html";
+    });
+  </script>
+</body>
+</html>
