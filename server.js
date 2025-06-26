@@ -41,7 +41,7 @@ app.post("/ask-gemini", async (req, res) => {
   }
 });
 
-// Добавляем маршрут для отдачи HTML по корню
+// Отдаём файл filterss.html при заходе на корень сайта
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "filterss.html"));
 });
