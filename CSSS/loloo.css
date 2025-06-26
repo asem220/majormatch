@@ -1,0 +1,91 @@
+body {
+  font-family: 'Jost', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://cdn.etalapker.kz/public/media/1000089/1706889380959_86e21e44-8470-46ec-ac4e-cd5858dfe92d.jpeg') center/cover no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration {
+  width: 380px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+label {
+  display: block;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #2e2a3a;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+.login {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login label {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 182, 193, 0.8);
+}
+
+@media (max-width: 500px) {
+  .registration {
+    width: 90%;
+    padding: 30px;
+  }
+  label {
+    font-size: 1.8rem;
+  }
+}
