@@ -6,7 +6,7 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -45,4 +45,16 @@ app.post("/ask-gemini", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`✅ Сервер работает: http://localhost:${PORT}`);
+});
+const express = require("express");
+const path = require("path");
+const app = express();
+
+// ...
+
+app.use(express.static(__dirname)); // уже есть
+
+// Добавь этот маршрут:
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "filterss.html")); // или другой HTML-файл
 });
