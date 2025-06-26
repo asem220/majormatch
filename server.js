@@ -1,4 +1,3 @@
-// server.js
 require("dotenv").config();
 const express = require("express");
 const axios = require("axios");
@@ -10,11 +9,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static(__dirname)); // Чтобы работали HTML, CSS и изображения
+app.use(express.static(__dirname));
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
-// POST-запрос от клиента
 app.post("/ask-gemini", async (req, res) => {
   const { prompt } = req.body;
 
@@ -43,18 +41,11 @@ app.post("/ask-gemini", async (req, res) => {
   }
 });
 
+// Добавляем маршрут для отдачи HTML по корню
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "filterss.html"));
+});
+
 app.listen(PORT, () => {
   console.log(`✅ Сервер работает: http://localhost:${PORT}`);
-});
-const express = require("express");
-const path = require("path");
-const app = express();
-
-// ...
-
-app.use(express.static(__dirname)); // уже есть
-
-// Добавь этот маршрут:
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "filterss.html")); // или другой HTML-файл
 });
