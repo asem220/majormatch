@@ -228,7 +228,11 @@
     document.getElementById("results").style.display = "none";
 
     try {
-      const response = await fetch("http://localhost:3000/ask-gemini", {
+      const API_BASE_URL = window.location.hostname === "localhost"
+        ? "http://localhost:3000"
+        : "https://majormatch.onrender.com";
+
+      const response = await fetch(`${API_BASE_URL}/ask-gemini`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
