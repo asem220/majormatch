@@ -440,3 +440,12 @@ section:last-of-type,
 .account-icon-btn:hover span {
   opacity: 1;
 }
+@media (max-width: 768px) {
+  header {
+    padding: 4rem 1rem 8rem; /* уменьшаем отступы, чтобы волна была ближе к контенту */
+  }
+
+  .wave-svg {
+    height: 140px; /* увеличиваем высоту волны */
+  }
+}

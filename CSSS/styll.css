@@ -24,7 +24,7 @@ header {
   position: relative;
   background: transparent;
   color: white;
-  padding: 6rem 2rem 12rem;
+  padding: 6rem 2rem 16rem; /* Увеличен нижний отступ */
   text-align: center;
   overflow: hidden;
 }
@@ -35,7 +35,6 @@ header h1 {
   position: relative;
   z-index: 2;
 }
-
 
 header p {
   position: relative;
@@ -69,8 +68,10 @@ header p {
 .container {
   position: relative;
   z-index: 2;
+  margin-top: 0; /* Было -5rem, теперь убрано */
   max-width: 720px;
-  margin: -3rem auto 3rem;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 16px;
@@ -126,6 +127,7 @@ textarea::placeholder {
     padding: 1rem;
   }
 }
+
 .uni-card {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -141,6 +143,7 @@ textarea::placeholder {
 .uni-card:hover {
   transform: translateY(-5px);
 }
+
 .find-university-btn {
   width: 100%;
   padding: 12px;
@@ -158,6 +161,7 @@ textarea::placeholder {
 .find-university-btn:hover {
   transform: scale(1.03);
 }
+
 #resultsTitle {
   color: white;
   font-size: 1.8rem;
@@ -165,6 +169,7 @@ textarea::placeholder {
   margin-bottom: 1rem;
   text-align: center;
 }
+
 .site-footer {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
               linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
@@ -220,7 +225,7 @@ textarea::placeholder {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
 }
-/* Убираем лишний белый фон и отступы перед футером */
+
 .container:last-child,
 section:last-of-type,
 .impact-content:last-of-type {
@@ -232,9 +237,9 @@ section:last-of-type,
 }
 
 body {
-  background-color: #2e2a3a; /* или твой базовый фон */
+  background-color: #2e2a3a;
 }
-/* Базовая кнопка */
+
 .navbar-btn {
   position: relative;
   display: inline-flex;
@@ -272,17 +277,16 @@ body {
   font-size: 1rem;
 }
 
-/* Hover эффект */
 .navbar-btn:hover i {
   left: 20px;
   transform: translateX(0);
 }
+
 .navbar-btn:hover span {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Активная кнопка */
 .navbar-btn.active {
   background: linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
   color: white;
@@ -292,18 +296,17 @@ body {
   z-index: 2;
 }
 
-/* Когда наводимся на другие кнопки — активная тускнеет */
 .nav-buttons:hover .navbar-btn.active:not(:hover) {
   filter: brightness(0.5);
 }
 
-/* Неактивная кнопка при наведении становится как активная */
 .navbar-btn:not(.active):hover {
   background: linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
   color: white;
   border: none;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
+
 .account-icon-btn {
   position: absolute;
   top: 20px;
@@ -357,4 +360,14 @@ body {
 
 .account-icon-btn:hover span {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 4rem 1rem 12rem;
+  }
+
+  .wave-svg {
+    height: 140px;
+  }
 }
