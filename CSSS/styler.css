@@ -374,3 +374,73 @@ section:last-of-type,
 body {
   background-color: #2e2a3a; /* или твой базовый фон */
 }
+/* Базовая кнопка */
+.navbar-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: 500;
+  border-radius: 50px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  padding: 0 20px;
+  backdrop-filter: blur(6px);
+  z-index: 1;
+}
+
+.navbar-btn i {
+  font-size: 1.2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.4s ease;
+}
+
+.navbar-btn span {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.4s ease;
+  margin-left: 30px;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+/* Hover эффект */
+.navbar-btn:hover i {
+  left: 20px;
+  transform: translateX(0);
+}
+.navbar-btn:hover span {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Активная кнопка */
+.navbar-btn.active {
+  background: linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
+  color: white;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+/* Когда наводимся на другие кнопки — активная тускнеет */
+.nav-buttons:hover .navbar-btn.active:not(:hover) {
+  filter: brightness(0.5);
+}
+
+/* Неактивная кнопка при наведении становится как активная */
+.navbar-btn:not(.active):hover {
+  background: linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
+  color: white;
+  border: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
