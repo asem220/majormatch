@@ -7,80 +7,81 @@ body {
   color: white;
   min-height: 100vh;
 }
-    header  {
-      position: relative;
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
-      color: white;
-      padding: 6rem 2rem 12rem;
-      text-align: center;
-      overflow: hidden;
-    }
 
-    header h1 {
-      font-size: 3rem;
-      position: relative;
-      z-index: 2;
-    }
+header {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
+  color: white;
+  padding: 6rem 2rem 12rem;
+  text-align: center;
+  overflow: hidden;
+}
 
-    header p {
-      position: relative;
-      z-index: 2;
-    }
+header h1 {
+  font-size: 3rem;
+  position: relative;
+  z-index: 2;
+}
 
-    .nav-buttons .btn {
-      margin: 0.5rem;
-    }
+header p {
+  position: relative;
+  z-index: 2;
+}
 
-    .wave-svg {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-      z-index: 1;
-      animation: waveMotion 4s ease-in-out infinite;
-    }
+.nav-buttons .btn {
+  margin: 0.5rem;
+}
 
-    @keyframes waveMotion {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(10px); }
-    }
+.wave-svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  animation: waveMotion 4s ease-in-out infinite;
+}
 
-    .wave-svg path {
-      fill: white;
-      fill-opacity: 0.1;
-    }
+@keyframes waveMotion {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
 
-    .impact-section {
-      position: relative;
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
-      padding: 6rem 2rem;
-      overflow: hidden;
-      z-index: 2;
-    }
+.wave-svg path {
+  fill: white;
+  fill-opacity: 0.1;
+}
 
-    .impact-section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://static.tildacdn.com/tild3066-6138-4561-b062-396131653131/3a71b31c5e5e03960635.jpg') center/cover no-repeat;
-      opacity: 0.15;
-      z-index: 0;
-    }
+.impact-section {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
+  padding: 6rem 2rem;
+  overflow: hidden;
+  z-index: 2;
+}
 
-    .impact-content {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      position: relative;
-      z-index: 2;
-    }
+.impact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://static.tildacdn.com/tild3066-6138-4561-b062-396131653131/3a71b31c5e5e03960635.jpg') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
 
-    .impact-text {
+.impact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.impact-text {
   flex: 1 1 45%;
   max-width: 500px;
   margin-right: auto;
@@ -89,31 +90,31 @@ body {
   gap: 1.5rem;
 }
 
-    .impact-card {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 1.8rem;
-      border-left: 4px solid rgba(255,255,255,0.4);
-      border-radius: 12px;
-      transition: transform 0.3s ease;
-    }
+.impact-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.8rem;
+  border-left: 4px solid rgba(255,255,255,0.4);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
 
-    .impact-card:hover {
-      transform: translateX(10px);
-    }
+.impact-card:hover {
+  transform: translateX(10px);
+}
 
-    .impact-card h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: #fff;
-    }
+.impact-card h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
 
-    .impact-card p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #e0e0e0;
-    }
+.impact-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
 
-    .impact-image {
+.impact-image {
   flex: 1 1 50%;
   margin-right: 4px solid ;
   max-width: 850px;
@@ -123,43 +124,30 @@ body {
   position: sticky;
   top: 100px;
 }
-    .impact-image.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
 
-    .impact-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
-      object-fit: cover;
-    }
-
-    @media (max-width: 768px) {
-      .impact-content {
-        flex-direction: column;
-      }
-
-      .impact-image {
-        max-width: 200%;
-        position: relative;
-        top: auto;
-      }
-    }
-    * 
-
-
-.content {
-  flex: 1;
-  color: white;
-  font-family: sans-serif;
+.impact-image.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.content {
-  flex: 1;
-  color: white;
-  font-family: sans-serif;
+.impact-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .impact-content {
+    flex-direction: column;
+  }
+
+  .impact-image {
+    max-width: 200%;
+    position: relative;
+    top: auto;
+  }
 }
 
 .gallery {
@@ -188,46 +176,6 @@ body {
   transform: scale(1.05);
   z-index: 1;
 }
-
-.after-header {
-  .container {
-  display: flex;
-  width: 100%;
-  padding: 4% 2%;
-  box-sizing: border-box;
-  height: 100vh;
-}
-
-.box {
-  flex: 1;
-  overflow: hidden;
-  transition: .5s;
-  margin: 0 2%;
-  box-shadow: 0 20px 30px rgba(0,0,0,.1);
-  line-height: 0;
-}
-
-.box > img {
-  width: 200%;
-  height: calc(100% - 10vh);
-  object-fit: cover; 
-  transition: .5s;
-}
-
-.box > span {
-  font-size: 3.8vh;
-  display: block;
-  text-align: center;
-  height: 10vh;
-  line-height: 2.6;
-}
-
-.box:hover { flex: 1 1 50%; }
-.box:hover > img {
-  width: 100%;
-  height: 100%;
-}
-
 
 .university-gallery {
   padding: 40px;
@@ -304,7 +252,7 @@ body {
 .university-gallery__card:hover {
   cursor: pointer;
 }
-}
+
 .site-footer {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
               linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
@@ -360,7 +308,7 @@ body {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
 }
-/* Убираем лишний белый фон и отступы перед футером */
+
 .container:last-child,
 section:last-of-type,
 .impact-content:last-of-type {
@@ -371,10 +319,6 @@ section:last-of-type,
   margin-top: 0;
 }
 
-body {
-  background-color: #2e2a3a; /* или твой базовый фон */
-}
-/* Базовая кнопка */
 .navbar-btn {
   position: relative;
   display: inline-flex;
@@ -412,17 +356,16 @@ body {
   font-size: 1rem;
 }
 
-/* Hover эффект */
 .navbar-btn:hover i {
   left: 20px;
   transform: translateX(0);
 }
+
 .navbar-btn:hover span {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Активная кнопка */
 .navbar-btn.active {
   background: linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
   color: white;
@@ -432,18 +375,17 @@ body {
   z-index: 2;
 }
 
-/* Когда наводимся на другие кнопки — активная тускнеет */
 .nav-buttons:hover .navbar-btn.active:not(:hover) {
   filter: brightness(0.5);
 }
 
-/* Неактивная кнопка при наведении становится как активная */
 .navbar-btn:not(.active):hover {
   background: linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
   color: white;
   border: none;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
+
 .account-icon-btn {
   position: absolute;
   top: 20px;
@@ -482,7 +424,6 @@ body {
   transition: all 0.4s ease;
 }
 
-/* Hover поведение */
 .account-icon-btn:hover {
   width: 180px;
   background: linear-gradient(90deg, #ffb6c1, #da70d6, #8a2be2, #4169e1);
