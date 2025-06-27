@@ -82,35 +82,10 @@ input:focus {
 }
 
 /* 🔽 Адаптация */
-@media (max-width: 768px) {
-  .registration {
-    width: 90%;
-    padding: 30px 20px;
-  }
-
-  label {
-    font-size: 1.8rem;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  input[type="password"],
-  button {
-    font-size: 1rem;
-    padding: 10px;
-  }
-
-  .login {
-    margin-top: 30px;
-    padding-top: 15px;
-  }
-}
-
 @media (max-width: 500px) {
   body {
     padding: 16px;
-    align-items: flex-start;
+    align-items: center; /* ← исправлено */
   }
 
   .registration {
@@ -119,6 +94,11 @@ input:focus {
 
   label {
     font-size: 1.6rem;
+  }
+
+  .login {
+    margin-top: 20px; /* ← уменьшено */
+    padding-top: 10px;
   }
 
   .login label {
