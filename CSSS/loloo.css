@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px; /* Чтобы на телефоне не прилипало к краю */
 }
 
 .registration {
@@ -80,12 +81,43 @@ input:focus {
   box-shadow: 0 0 0 2px rgba(255, 182, 193, 0.8);
 }
 
-@media (max-width: 500px) {
+/* 🔽 Мобильная адаптация */
+@media (max-width: 768px) {
   .registration {
-    width: 90%;
-    padding: 30px;
+    width: 100%;
+    max-width: 420px;
+    padding: 32px;
   }
+
   label {
     font-size: 1.8rem;
+  }
+
+  input, button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 16px;
+    align-items: flex-start;
+  }
+
+  .registration {
+    width: 100%;
+    padding: 24px;
+  }
+
+  label {
+    font-size: 1.6rem;
+  }
+
+  .login label {
+    font-size: 1.4rem;
+  }
+
+  input, button {
+    font-size: 0.95rem;
   }
 }

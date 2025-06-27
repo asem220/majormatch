@@ -118,3 +118,61 @@ body::before {
   border: none;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
+@media (max-width: 768px) {
+  .profile-container {
+    margin: 3rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .profile-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .profile-section h3 {
+    font-size: 1rem;
+  }
+
+  .profile-section p {
+    font-size: 0.95rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .back-home-btn {
+    width: 100%;
+    max-width: 300px;
+    height: 46px;
+    font-size: 0.95rem;
+  }
+
+  .back-home-btn i {
+    font-size: 1rem;
+  }
+
+  .back-home-btn span {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 1.2rem;
+  }
+
+  .profile-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-section h3 {
+    font-size: 0.95rem;
+  }
+
+  .profile-section p {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .back-home-btn {
+    height: 44px;
+    font-size: 0.9rem;
+  }
+}
